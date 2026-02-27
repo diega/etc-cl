@@ -1,0 +1,9 @@
+target/
+*.pem
+jwt.hex
+.env
+.env.local
+.DS_Store
+*.swp
+*~
+.claude/

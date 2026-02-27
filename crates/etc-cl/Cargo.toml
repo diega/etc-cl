@@ -1,0 +1,29 @@
+[package]
+name = "etc-cl"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "etc-cl"
+path = "src/main.rs"
+
+[dependencies]
+tokio = { workspace = true }
+clap = { workspace = true }
+serde = { workspace = true }
+toml = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+hex = { workspace = true }
+thiserror = { workspace = true }
+alloy-primitives = { workspace = true }
+
+engine-api = { path = "../engine-api" }
+chain = { path = "../chain" }
+devp2p = { path = "../devp2p" }
+sync = { path = "../sync" }
+eth-rpc = { path = "../eth-rpc" }
+k256 = { workspace = true }
+rand = { workspace = true }
+url = { workspace = true }
+mining = { path = "../mining" }

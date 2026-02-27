@@ -1,0 +1,68 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/etc-cl",
+    "crates/engine-api",
+    "crates/consensus",
+    "crates/chain",
+    "crates/forks",
+    "crates/devp2p",
+    "crates/mining",
+    "crates/sync",
+    "crates/eth-rpc",
+    "crates/serde-hex",
+]
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1", features = ["full"] }
+
+# HTTP client
+reqwest = { version = "0.12", features = ["json"] }
+
+# Parallelism
+rayon = "1"
+
+# Crypto
+k256 = { version = "0.13", features = ["ecdsa", "ecdh"] }
+sha2 = "0.10"
+sha3 = "0.10"
+aes = "0.8"
+ctr = "0.9"
+hkdf = "0.12"
+hmac = "0.12"
+snap = "1"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# JWT
+jsonwebtoken = "9"
+
+# Ethereum types
+alloy-primitives = { version = "1", features = ["serde", "getrandom"] }
+
+# Hex encoding
+hex = "0.4"
+
+# CRC32 (EIP-2124 fork ID)
+crc32fast = "1"
+
+# Misc
+thiserror = "2"
+chrono = "0.4"
+rand = "0.8"
+url = "2.5"
+hickory-resolver = { version = "0.25", features = ["tokio", "system-config"] }
+data-encoding = "2"
+base64 = "0.22"
+axum = "0.8"

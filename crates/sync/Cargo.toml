@@ -1,0 +1,27 @@
+[package]
+name = "sync"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+test-helpers = []
+
+[dependencies]
+tokio = { workspace = true }
+alloy-primitives = { workspace = true }
+tracing = { workspace = true }
+sha3 = { workspace = true }
+hex = { workspace = true }
+snap = { workspace = true }
+
+chain = { path = "../chain" }
+consensus = { path = "../consensus" }
+engine-api = { path = "../engine-api" }
+eth-rpc = { path = "../eth-rpc" }
+devp2p = { path = "../devp2p" }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["full", "test-util"] }
+tempfile = "3"
+consensus = { path = "../consensus" }
+sync = { path = ".", features = ["test-helpers"] }

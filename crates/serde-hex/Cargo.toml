@@ -1,0 +1,9 @@
+[package]
+name = "serde-hex"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+serde = { workspace = true }
+alloy-primitives = { workspace = true }
+hex = { workspace = true }

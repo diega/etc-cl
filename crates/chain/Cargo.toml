@@ -1,0 +1,9 @@
+[package]
+name = "chain"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy-primitives = { workspace = true }
+sha3 = { workspace = true }
+tracing = { workspace = true }

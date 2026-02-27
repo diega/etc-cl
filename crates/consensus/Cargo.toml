@@ -1,0 +1,13 @@
+[package]
+name = "consensus"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+alloy-primitives = { workspace = true }
+sha3 = { workspace = true }
+hex = { workspace = true }
+thiserror = { workspace = true }
+
+chain = { path = "../chain" }
+forks = { path = "../forks" }
